@@ -1,0 +1,218 @@
+// h1{
+//     color: $base-color;
+//     @include media(pc) {
+//         color: $main-color;
+//     }
+//     @include media(tab) {
+//         color: $accent-color;
+//     }
+//     @include media(sp) {
+//         font-size: 20px;
+//     }
+// }
+
+
+
+// all
+*{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.na{
+    color: $accent-color;
+}
+a{
+    text-decoration: none;
+}
+
+
+
+// index
+// header
+header{
+    width: 17%;
+    background-color: rgb(210, 210, 233);
+    position: fixed;
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    > h1 {
+        > a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 0;
+        }
+        img {
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            &:hover {
+                display: inline-block;
+                animation: hurueru .2s  infinite;
+            }
+        }
+        span {
+            font-family: 'Sawarabi Mincho', sans-serif;
+            font-size: 20px;
+            font-weight: lighter;
+            color: white;
+            > strong {
+                font-family: 'Sawarabi Mincho', sans-serif;
+            }
+        }
+
+    }
+    > ul {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 30px;
+        // margin-left: 20px;
+        font-size: 18px;
+        // font-weight: bold;
+        // list-style: none;
+        > li {
+            margin-bottom: 20px;
+            overflow: hidden;
+            height: 1em;
+            line-height: 1;
+            position: relative;
+            width: 6em;
+            &:first-child{
+                margin-bottom: 40px;
+            }
+            a {
+                text-decoration: none;
+                color: white;
+                position: absolute;
+            }
+            span {
+                position: absolute;
+                left: 0;
+                top: 1.5em;
+                white-space: nowrap;
+                a {
+                    color: $accent-color;
+                }
+            }
+        }
+    }
+}
+
+
+
+// main
+main{
+    margin-left: 17%;
+    padding-left: 3%;
+    padding-right: 3%;
+    > h2 {
+        font-size: 30px;
+        font-weight: lighter;
+        border-bottom: 1px black solid;
+        display: inline-block;
+        margin: 50px 0 20px 0;
+    }
+    > article {
+        display: flex;
+        flex-direction: column;
+        > p {
+            width: 60%;
+            text-align: justify;
+            text-justify: inter-ideograph;
+        }
+        > img {
+            height: auto;
+            width: 60vh;
+            align-self: flex-end;
+            margin: 30px 0;
+            border-radius: 25px;
+        }
+    }
+}
+
+
+
+
+// footer
+footer{
+    margin-left: 17%;
+    // padding-left: 3%;
+    // background-color: rgb(210, 210, 233);
+    background-color: black;
+    > ul {
+        display: flex;
+        justify-content: center;
+        > li {
+            margin: 10px 20px 0 0;
+            &:last-child {
+                margin-right: 0;
+            }
+            > a {
+                > img {
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 50%;
+                    &:hover {
+                        display: inline-block;
+                        animation: hurueru .2s  infinite;
+                    }
+                }
+            }
+        }
+    }
+    > p {
+        text-align: center;
+        padding-bottom: 10px;
+        font-size: 10px;
+        color: white;
+    }
+}
+
+
+
+
+// #nav5 {
+//     margin-left: 20px;
+//     font-size: 100%;
+//     font-weight: bold;
+//     list-style: none;
+// }
+// #nav5 li {
+//     margin-bottom: 0.8em;
+//     overflow: hidden;
+//     height: 1em;
+//     line-height: 1;
+//     position: relative;
+//     width: 6em;
+// }
+// #nav5 li a {
+//     text-decoration: none;
+//     color: #333333;
+//     position: absolute;
+// }
+// #nav5 li span {
+//     position: absolute;
+//     left: 0;
+//     top: 1.5em;
+//     white-space: nowrap;
+// }
+// #nav5 li span a {
+//     color: #FF9900;
+// }
+
+
+// keyframes
+
+@keyframes hurueru {
+    0% {transform: translate(0px, 0px) rotateZ(0deg)}
+    25% {transform: translate(8px, 8px) rotateZ(1deg)}
+    50% {transform: translate(0px, 8px) rotateZ(0deg)}
+    75% {transform: translate(8px, 0px) rotateZ(-1deg)}
+    100% {transform: translate(0px, 0px) rotateZ(0deg)}
+}
+
+
+
+
+

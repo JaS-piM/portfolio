@@ -1,11 +1,13 @@
 let gulp = require('gulp');
 let sass = require('gulp-sass');
 let sourcemaps = require('gulp-sourcemaps');
+let sassGlob = require('gulp-sass-glob');
 let cleanCSS = require('gulp-clean-css');
 let rename = require('gulp-rename');
 gulp.task('sass', function () {
   return gulp.src('./sass/**/*.scss')
     .pipe(sourcemaps.init())
+    .pipe(sassGlob())
     .pipe(sass({ outputStyle: 'compact' }))
     .pipe(sass().on('error', sass.logError))
     .pipe(sourcemaps.write('./'))
